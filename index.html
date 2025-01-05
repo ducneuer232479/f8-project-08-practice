@@ -31,16 +31,17 @@
     <script src="./assets/js/scripts.js"></script>
   </head>
   <body>
-    <header id="header"></header>
-    <script>
-      load('#header', './template/header.html')
-    </script>
+    <header id="header" class="header"></header>
 
-    <h1>Home page</h1>
-
-    <footer id="footer"></footer>
-    <script>
-      load('#footer', './template/footer.html')
-    </script>
+    <div class="container">
+      <script>
+        load('#header', './template/header.html')
+      </script>
+      <h1>Home page</h1>
+      <footer id="footer"></footer>
+      <script>
+        load('#footer', './template/footer.html')
+      </script>
+    </div>
   </body>
 </html>
