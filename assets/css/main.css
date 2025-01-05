@@ -135,6 +135,11 @@ table {
   box-sizing: border-box;
 }
 
+:root {
+  --text-color: #1a162e;
+  --icon-color: filter: brightness(0) saturate(100%) invert(9%) sepia(7%) saturate(6018%) hue-rotate(212deg) brightness(89%) contrast(95%);
+}
+
 html {
   font-size: 62.5%;
 }
@@ -142,6 +147,7 @@ html {
 body {
   font-family: "Gordita", sans-serif;
   font-size: 1.6rem;
+  color: var(--text-color);
 }
 
 a {
@@ -153,6 +159,19 @@ button {
   outline: none;
   border: none;
   background: transparent;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+.icon {
+  filter: var(--icon-color);
 }
 
 .row > *, .container-fluid, .container {
@@ -1186,14 +1205,14 @@ button {
     --grid-gutter-y: 90px;
   }
 }
+.top-act__btn, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
+  display: flex;
+  align-items: center;
+}
+
 .header {
   background: #eee;
   padding: 30px 0;
-}
-
-.top-bar {
-  display: flex;
-  align-items: center;
 }
 
 .navbar {
@@ -1201,15 +1220,10 @@ button {
   margin-right: auto;
 }
 .navbar__list {
-  display: flex;
-  align-items: center;
   gap: 30px;
 }
 .navbar__link {
-  display: flex;
-  align-items: center;
   gap: 6px;
-  color: #1a162e;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.4666666667;
@@ -1219,13 +1233,9 @@ button {
 }
 
 .top-act {
-  display: flex;
-  align-items: center;
   gap: 20px;
 }
 .top-act__group {
-  display: flex;
-  align-items: center;
   min-width: 50px;
   height: 50px;
   border-radius: 8px;
@@ -1241,13 +1251,11 @@ button {
   background: #ededf6;
 }
 .top-act__btn {
-  display: flex;
-  align-items: center;
   gap: 10px;
   padding: 13px 20px;
+  cursor: pointer;
 }
 .top-act__title {
-  color: #1a162e;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.4666666667;
@@ -1258,6 +1266,7 @@ button {
   height: 50px;
   border-radius: 8px;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .logo {
