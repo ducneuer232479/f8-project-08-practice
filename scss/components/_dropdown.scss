@@ -5,7 +5,7 @@
   left: 0;
   width: min(1240px, 100%);
   padding-top: 54px;
-  // display: none;
+  display: none;
 
   &__inner {
     --inner-padding: 30px;
@@ -90,11 +90,14 @@
     margin-top: 18px;
   }
 
-  &__item:hover .sub-menu {
-    display: grid;
+  &__item {
+    &--active .sub-menu {
+      display: grid;
+    }
   }
 
-  &__item:hover > &__link {
+  &__item:hover > &__link,
+  &__item--active > &__link {
     color: #0071dc;
     font-weight: 500;
   }
@@ -110,8 +113,9 @@
 .sub-menu {
   position: absolute;
   inset: 0 0 0 var(--main-column-width);
-  display: grid;
+  display: none;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   padding-left: var(--inner-padding);
+  overflow-y: auto;
 }

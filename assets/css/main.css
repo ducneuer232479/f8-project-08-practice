@@ -1386,6 +1386,7 @@ html.dark {
   left: 0;
   width: min(1240px, 100%);
   padding-top: 54px;
+  display: none;
 }
 .dropdown__inner {
   --inner-padding: 30px;
@@ -1459,10 +1460,10 @@ html.dark {
 .menu-column__list {
   margin-top: 18px;
 }
-.menu-column__item:hover .sub-menu {
+.menu-column__item--active .sub-menu {
   display: grid;
 }
-.menu-column__item:hover > .menu-column__link {
+.menu-column__item:hover > .menu-column__link, .menu-column__item--active > .menu-column__link {
   color: #0071dc;
   font-weight: 500;
 }
@@ -1476,10 +1477,11 @@ html.dark {
 .sub-menu {
   position: absolute;
   inset: 0 0 0 var(--main-column-width);
-  display: grid;
+  display: none;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   padding-left: var(--inner-padding);
+  overflow-y: auto;
 }
 
 /*# sourceMappingURL=main.css.map */
