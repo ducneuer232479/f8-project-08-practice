@@ -1420,7 +1420,7 @@ html.dark {
   gap: 14px;
 }
 .menu-column + .menu-column {
-  margin-top: var(--inner-padding);
+  margin-top: 22px;
 }
 .menu-column__icon {
   flex-shrink: 0;
@@ -1428,13 +1428,18 @@ html.dark {
   width: 36px;
   height: 36px;
 }
+@media (max-width: 1199.98px) {
+  .menu-column__icon {
+    display: none;
+  }
+}
 .menu-column__content {
   flex: 1;
 }
 .menu-column__icon-1 {
   width: 30px;
   height: 30px;
-  object-fit: cover;
+  object-fit: contain;
 }
 .menu-column__icon-2 {
   position: absolute;
@@ -1442,7 +1447,7 @@ html.dark {
   bottom: 0;
   width: 24px;
   height: 24px;
-  object-fit: cover;
+  object-fit: contain;
   filter: var(--menu-column-icon-color);
 }
 .menu-column__heading {
@@ -1471,7 +1476,7 @@ html.dark {
 .sub-menu {
   position: absolute;
   inset: 0 0 0 var(--main-column-width);
-  display: none;
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   padding-left: var(--inner-padding);
