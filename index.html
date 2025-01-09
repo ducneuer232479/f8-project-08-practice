@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,25 +42,17 @@
       <div class="slideshow">
         <div class="slideshow__inner">
           <div class="slideshow__item">
-            <img
-              src="./assets/img/slideshow/item-1.png"
-              alt=""
-              class="slideshow__img"
-            />
-          </div>
-          <div class="slideshow__item">
-            <img
-              src="./assets/img/slideshow/item-1.png"
-              alt=""
-              class="slideshow__img"
-            />
-          </div>
-          <div class="slideshow__item">
-            <img
-              src="./assets/img/slideshow/item-1.png"
-              alt=""
-              class="slideshow__img"
-            />
+            <picture>
+              <source
+                media="(max-width: 767.98px)"
+                srcset="./assets/img/slideshow/item-1-md.png"
+              />
+              <img
+                src="./assets/img/slideshow/item-1.png"
+                alt=""
+                class="slideshow__img"
+              />
+            </picture>
           </div>
         </div>
 
