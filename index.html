@@ -157,13 +157,15 @@
                           class="filter__form-label filter__form-label--small"
                           >Minimum</label
                         >
-                        <input
-                          type="text"
-                          value="$30.00"
-                          name=""
-                          id=""
-                          class="filter__form-input"
-                        />
+                        <div
+                          class="filter__form-text-input filter__form-text-input--small"
+                        >
+                          <input
+                            type="text"
+                            class="filter__form-input"
+                            value="$30.00"
+                          />
+                        </div>
                       </div>
                       <div>
                         <label
@@ -171,13 +173,15 @@
                           class="filter__form-label filter__form-label--small"
                           >Maximum</label
                         >
-                        <input
-                          type="text"
-                          value="$100.00"
-                          name=""
-                          id=""
-                          class="filter__form-input"
-                        />
+                        <div
+                          class="filter__form-text-input filter__form-text-input--small"
+                        >
+                          <input
+                            type="text"
+                            class="filter__form-input"
+                            value="$100.00"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -216,7 +220,31 @@
                   </div>
 
                   <div class="filter__separate"></div>
-                  <div class="filter__col"></div>
+                  <div class="filter__col">
+                    <label for="" class="filter__form-label">Price</label>
+                    <div class="filter__form-group">
+                      <div class="filter__form-text-input">
+                        <input
+                          type="text"
+                          class="filter__form-input"
+                          placeholder="Search brand name"
+                        />
+                        <img
+                          src="./assets/icons/search.svg"
+                          alt=""
+                          class="filter__form-input-icon"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="filter__form-group">
+                      <div class="filter__form-tags">
+                        <div class="filter__form-tag">Lavazza</div>
+                        <div class="filter__form-tag">Nescafe</div>
+                        <div class="filter__form-tag">Starbucks</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </form>
             </div>
